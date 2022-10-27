@@ -36,50 +36,44 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe("the heading class", () => {
-
-  it("should have font with 50 pixel size", async () => {
-    const fontSize = await page.$eval("div", (div) => {
-      let style = window.getComputedStyle(div);
-      return style.getPropertyValue("font-size");
-    });
-
-    expect(fontSize).toEqual("50px");
-  });
-
-  it("should have bold font", async () => {
-    const fontWeight = await page.$eval("div", (div) => {
-      let style = window.getComputedStyle(div);
-      return style.getPropertyValue("font-weight");
-    });
-
-    expect(fontWeight).toEqual("700");
-  });
-
-  it("should have Lucida Grande font", async () => {
-    const fontFamily = await page.$eval("div", (div) => {
-      let style = window.getComputedStyle(div);
-      return style.getPropertyValue("font-family");
-    });
-
-    expect(fontFamily).toEqual('"Lucida Grande"');
-  });
-
-  it("should have centered text", async () => {
-    const textAlign = await page.$eval("div", (div) => {
-      let style = window.getComputedStyle(div);
-      return style.getPropertyValue("text-align");
+describe('the image with sized-pic id', () => {
+  it('should be 50px wide', async () => {
+    const width = await page.$eval('img[id="sized-pic"]', (img) => {
+      let style = window.getComputedStyle(img);
+      return style.getPropertyValue('width');
     });
     
-    expect(textAlign).toEqual("center");
+    expect(width).toEqual('50px');
   });
+  
+  it('should be 50px tall', async () => {
+    const height = await page.$eval('img[id="sized-pic"]', (img) => {
+      let style = window.getComputedStyle(img);
+      return style.getPropertyValue('height');
+    });
 
-  it("should have lower case text", async () => {
-    const textTransform = await page.$eval("div", (div) => {
-      let style = window.getComputedStyle(div);
-      return style.getPropertyValue("text-transform");
+    expect(height).toEqual('60px');
+  });
+});
+
+describe('the image with rounded-pic id', () => {
+  it('should have rounded corners', async () => {
+    const borderRadius = await page.$eval('img[id="rounded-pic"]', (img) => {
+      let style = window.getComputedStyle(img);
+      return style.getPropertyValue('border-radius');
     });
     
-    expect(textTransform).toEqual("lowercase");
+    expect(borderRadius).toEqual('15px');
+  });
+});
+
+describe('the image with circle-pic id', () => {
+  it('should be displayed as a complete circle', async () => {
+    const borderRadius = await page.$eval('img[id="circle-pic"]', (img) => {
+      let style = window.getComputedStyle(img);
+      return style.getPropertyValue('border-radius');
+    });
+    
+    expect(borderRadius).toEqual('50%');
   });
 });
