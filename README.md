@@ -4,8 +4,6 @@ The `index.html` file
 - should style the `circle-pic` so that it displays as a complete circle
 
 Resources:
-- https://www.w3schools.com/cssref/pr_font_font-size.asp
-- https://www.w3schools.com/cssref/pr_font_weight.asp
-- https://www.w3schools.com/cssref/pr_font_font-family.asp
-- https://www.w3schools.com/cssref/pr_text_text-align.asp
-- https://www.w3schools.com/cssref/pr_text_text-transform.asp
+- https://www.w3schools.com/cssref/pr_dim_width.asp
+- https://www.w3schools.com/cssref/pr_dim_height.asp
+- https://www.w3schools.com/cssref/css3_pr_border-radius.asp
