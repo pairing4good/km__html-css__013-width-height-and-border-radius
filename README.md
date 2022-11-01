@@ -1,3 +1,7 @@
+# 013 Width, Height and Border Radius
+
+[![013 Width, Height and Border Radius](https://img.youtube.com/vi/8noisFESouM/0.jpg)](https://www.youtube.com/watch?v=8noisFESouM)
+
 The `index.html` file
 - should style the `sized-pic` id with a 50px width and a 60px height
 - should style the `rounded-pic` id with rounded corners of 15px
